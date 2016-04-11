@@ -1,6 +1,9 @@
+Template.hackerList.onCreated(function(){
+  Meteor.subscribe('allHackers');
+});
+
 Template.hackerList.helpers({
     Hackers: function() {
-        Meteor.subscribe('allHackers');
         return Hackers.find();
     }
 });
